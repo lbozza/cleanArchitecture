@@ -1,0 +1,3 @@
+vendor
+/docker/nginx/logs/apisample.local.access.log
+/docker/nginx/logs/apisample.local.error.log
