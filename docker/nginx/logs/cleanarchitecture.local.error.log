@@ -279,3 +279,762 @@ Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\
 #4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
 #5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
 #6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:09:06 [error] 6#6: *80 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 16
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:14:27 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:14:42 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:14:56 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('RegisterProduct...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('RegisterProduct...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('RegisterProduct...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/slim/slim/Slim/Rout" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:15:03 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\RegisterPro...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\RegisterPro...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\RegisterPro...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/slim/slim/Sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:15:13 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:15:32 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:16:03 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:16:24 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:16:36 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 18
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:16:53 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('Action\\Register...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('Action\\Register...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('Action\\Register...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/slim/slim" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "localhost"
+2020/05/24 20:50:39 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('Action\\Register...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('Action\\Register...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('Action\\Register...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/slim/slim" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:50:56 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('Action\\Register...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('Action\\Register...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('Action\\Register...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/slim/slim" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:51:04 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:51:11 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 18
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:52:21 [error] 6#6: *8 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 18
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:53:50 [error] 6#6: *10 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 19
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 20:56:13 [error] 6#6: *12 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ContainerInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 21
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\App\\Action\\...')
+#2 [internal function]: spl_autoload_call('App\\App\\Action\\...')
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(22): class_exists('App\\App\\Action\\...')
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Source/ReflectionBasedAutowiring.php(41): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\App\\Action\\...')
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Source/SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\App\\Action\\...')
+#6 /var/www/html/vendo" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:02:16 [error] 6#6: *15 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Action\RegisterProductAction does not exist
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 147
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Action\\Regi...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Action\\Regi...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\Action\\Regi...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/vendor/sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:02:50 [error] 6#6: *15 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: App\App\Action\RegisterProductAction:save is not resolvable
+File: /var/www/html/vendor/slim/slim/Slim/CallableResolver.php
+Line: 165
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(107): Slim\CallableResolver->assertCallable(Array, 'App\\App\\Action\\...')
+#1 /var/www/html/vendor/slim/slim/Slim/CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\App\\Action\\...', Array, 'handle')
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(366): Slim\CallableResolver->resolveRoute('App\\App\\Action\\...')
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/v" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:07:04 [error] 6#6: *20 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'Domain\User\ProductService' not found
+File: /var/www/html/config/containers.php
+Line: 26
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Produc" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:08:39 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'Domain\Product\ProductService' not found
+File: /var/www/html/config/containers.php
+Line: 26
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Pro" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:09:01 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'Domain\Product\ProductService' not found
+File: /var/www/html/config/containers.php
+Line: 26
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Pro" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:09:28 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ProductDAOInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/Domain/Product/ProductService.php
+Line: 12
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Domain\\Prod...')
+#2 /var/www/html/config/containers.php(26): spl_autoload_call('App\\Domain\\Prod...')
+#3 [internal function]: {closure}()
+#4 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:10:39 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ProductDAOInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/Domain/Product/ProductService.php
+Line: 12
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Domain\\Prod...')
+#2 /var/www/html/config/containers.php(26): spl_autoload_call('App\\Domain\\Prod...')
+#3 [internal function]: {closure}()
+#4 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:10:51 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ProductDAOInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/Domain/Product/ProductService.php
+Line: 12
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Domain\\Prod...')
+#2 /var/www/html/config/containers.php(26): spl_autoload_call('App\\Domain\\Prod...')
+#3 [internal function]: {closure}()
+#4 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:11:04 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'ProductDAOInterface' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/Domain/Product/ProductService.php
+Line: 12
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Domain\\Prod...')
+#2 /var/www/html/config/containers.php(26): spl_autoload_call('App\\Domain\\Prod...')
+#3 [internal function]: {closure}()
+#4 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 21:24:26 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Slim\Routing\RouteRun
+2020/05/24 21:25:09 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'App\Infra\DAO\ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Slim\Ro
+2020/05/24 21:25:35 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'App\Infra\DAO\Product\ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107):
+2020/05/24 21:26:05 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'App\Infra\DAO\Product\ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107):
+2020/05/24 21:26:33 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'App\Infra\DAO\Product\ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107):
+2020/05/24 21:27:01 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'Infra\DAO\Product\ProductDAO' not found
+File: /var/www/html/config/containers.php
+Line: 27
+Trace: #0 [internal function]: {closure}()
+#1 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#2 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#3 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#6 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#7 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#8 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#9 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Sli
+2020/05/24 21:28:05 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): 
+2020/05/24 21:28:38 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): 
+2020/05/24 21:39:29 [error] 6#6: *10 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 20
+Trace: #0 /var/www/html/config/containers.php(20): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(28): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84):
+2020/05/24 21:39:42 [error] 6#6: *10 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84):
+2020/05/24 21:44:48 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84):
+2020/05/24 21:49:34 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): 
+2020/05/24 21:55:06 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): 
+2020/05/24 22:00:43 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 0
+Message: could not find driver
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Container->resolveDefinition(Object(DI\Definition\FactoryDefinition))
+#8 /var/www/html/src/App/Action/RegisterProductAction.php(42): DI\Container->get('Domain\\Product\\...')
+#9 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#10 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#11 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): 
+2020/05/24 22:03:31 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] No such file or directory
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=;dbn...', '', '')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Container.php(138): DI\Conta" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 22:28:33 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host="loc...', '"root"', '"root"')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 22:37:18 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host="127...', '"root"', '"root"')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 22:39:20 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 1045
+Message: SQLSTATE[HY000] [1045] Access denied for user '&quot;root&quot;'@'172.19.0.1' (using password: YES)
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=172....', '"root"', '"root"')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 22:40:02 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: PDOException
+Code: 1049
+Message: SQLSTATE[HY000] [1049] Unknown database '&quot;cleanarc&quot;'
+File: /var/www/html/config/containers.php
+Line: 19
+Trace: #0 /var/www/html/config/containers.php(19): PDO->__construct('mysql:host=172....', 'root', 'root')
+#1 /var/www/html/config/containers.php(27): {closure}()
+#2 [internal function]: {closure}()
+#3 /var/www/html/vendor/php-di/invoker/src/Invoker.php(82): call_user_func_array(Object(Closure), Array)
+#4 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/FactoryResolver.php(80): Invoker\Invoker->call(Object(Closure), Array)
+#5 /var/www/html/vendor/php-di/php-di/src/Definition/Resolver/ResolverDispatcher.php(64): DI\Definition\Resolver\FactoryResolver->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#6 /var/www/html/vendor/php-di/php-di/src/Container.php(387): DI\Definition\Resolver\ResolverDispatcher->resolve(Object(DI\Definition\FactoryDefinition), Array)
+#7 /var/www/html/vendor/php-di/php-di/src/Contai" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 23:00:37 [error] 6#6: *8 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: Error
+Code: 0
+Message: Class 'App\App\Action\ProductDTO' not found
+File: /var/www/html/src/App/Action/RegisterProductAction.php
+Line: 44
+Trace: #0 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 23:01:14 [error] 6#6: *8 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'int' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+File: /var/www/html/src/Domain/Product/ProductDTO.php
+Line: 10
+Trace: #0 /var/www/html/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/v...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Domain\\Prod...')
+#2 /var/www/html/src/App/Action/RegisterProductAction.php(45): spl_autoload_call('App\\Domain\\Prod...')
+#3 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\P" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 23:01:46 [error] 6#6: *8 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: TypeError
+Code: 0
+Message: Argument 1 passed to App\Domain\Product\ProductDTO::__construct() must be of the type string, null given, called in /var/www/html/src/App/Action/RegisterProductAction.php on line 48
+File: /var/www/html/src/Domain/Product/ProductDTO.php
+Line: 33
+Trace: #0 /var/www/html/src/App/Action/RegisterProductAction.php(48): App\Domain\Product\ProductDTO->__construct(NULL, NULL, NULL)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Mi" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"
+2020/05/24 23:05:54 [error] 6#6: *8 FastCGI sent in stderr: "PHP message: Slim Application Error
+Type: TypeError
+Code: 0
+Message: Argument 3 passed to App\Domain\Product\ProductDTO::__construct() must be of the type string, integer given, called in /var/www/html/src/App/Action/RegisterProductAction.php on line 49
+File: /var/www/html/src/Domain/Product/ProductDTO.php
+Line: 33
+Trace: #0 /var/www/html/src/App/Action/RegisterProductAction.php(49): App\Domain\Product\ProductDTO->__construct('teste', '1.00', 2)
+#1 /var/www/html/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): App\App\Action\RegisterProductAction->__invoke(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /var/www/html/vendor/slim/slim/Slim/Routing/Route.php(381): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Sl" while reading response header from upstream, client: 172.20.0.1, server: cleanarchitecture.local, request: "POST /registerProduct HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "cleanarchitecture"

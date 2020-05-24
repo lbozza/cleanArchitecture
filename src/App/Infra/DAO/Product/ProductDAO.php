@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infra\DAO\Product;
+namespace App\App\Infra\DAO\Product;
 
 use App\Domain\Product\ProductDAOInterface;
 use App\Domain\Product\ProductDTO;
@@ -14,7 +14,7 @@ class ProductDAO implements ProductDAOInterface
     /**
      * @var \PDO
      */
-    private \PDO $connection;
+    private  $connection;
 
     /**
      * ProductDAO constructor.
@@ -30,5 +30,13 @@ class ProductDAO implements ProductDAOInterface
      */
     public function save(ProductDTO $productDTO)
     {
+        $statement = "INSERT INTO product (description, value, quantity) VALUES (?, ? , ?)";
+        $this->connection->beginTransaction();
+        $this->connection->prepare($statement)->execute([
+            $productDTO->getDescription(),
+            $productDTO->getValue(),
+            $productDTO->getQuantity()
+        ]);
+        $this->connection->commit();
     }
 }

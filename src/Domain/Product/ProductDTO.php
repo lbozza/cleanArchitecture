@@ -7,30 +7,30 @@ class ProductDTO
     /**
      * @var int
      */
-    private int $id;
+    private  $id;
 
     /**
      * @var string
      */
-    private string $description;
+    private  $description;
 
     /**
      * @var string
      */
-    private string $value;
+    private  $value;
 
     /**
-     * @var string
+     * @var int
      */
-    private string $quantity;
+    private  $quantity;
 
     /**
      * ProductDTO constructor.
      * @param string $description
      * @param string $value
-     * @param string $quantity
+     * @param int $quantity
      */
-    public function __construct(string $description, string $value, string $quantity)
+    public function __construct(string $description, string $value, int $quantity)
     {
         $this->description = $description;
         $this->value = $value;

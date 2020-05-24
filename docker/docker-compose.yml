@@ -28,6 +28,10 @@ services:
         links:
             - db
 
+        env_file:
+            environment.env
+
+
     db:
         container_name: db
         image: mysql:5.7

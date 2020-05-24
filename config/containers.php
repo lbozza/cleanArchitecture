@@ -1,18 +1,18 @@
 <?php
 
-use App\Infra\DAO\Product;
-use Domain\User\ProductService;
+use App\App\Infra\DAO\Product\ProductDAO;
+use App\Domain\Product\ProductService;
 
 $container = new \DI\Container();
 
 $db = [
     'driver' => getenv('DB_DRIVER'),
     'charset' => getenv('DB_CHARSET'),
-    'host' => getenv('DB_HOST'),
+    'host' => '172.19.0.1',
     'port' => getenv('DB_PORT'),
-    'dbname' => getenv('DB_NAME'),
-    'user' => getenv('DB_USER'),
-    'pass' => getenv('DB_PASSWORD')
+    'dbname' => 'cleanarc',
+    'user' => 'root',
+    'pass' => 'root'
 ];
 
 $conn = function () use ($db) {

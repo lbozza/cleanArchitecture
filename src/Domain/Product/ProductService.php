@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\Product;
+namespace App\Domain\Product;
 
 use App\Domain\Product\ProductDAOInterface;
 
@@ -9,7 +9,7 @@ class ProductService
     /**
      * @var ProductDAOInterface
      */
-    private ProductDAOInterface $productDAO;
+    private  $productDAO;
 
     /**
      * ProductService constructor.

@@ -26,8 +26,7 @@ docker-php-ext-install pdo pdo_mysql \
     mysqli \
     mcrypt \
     gettext \
-    intl    \
-    ext-dom
+    intl
 
 pecl install xdebug-2.5.0 \
 	&& docker-php-ext-enable xdebug
