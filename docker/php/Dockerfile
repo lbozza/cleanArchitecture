@@ -1,11 +1,53 @@
-FROM php:7.1.15-fpm
+#
+#--------------------------------------------------------------------------
+# Image Setup
+#--------------------------------------------------------------------------
+#
 
-USER root
+FROM php:7.4-fpm
 
-ADD install_dependencies.sh /install_dependencies.sh
+# Set Environment Variables
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN chmod +x /install_dependencies.sh
+#
+#--------------------------------------------------------------------------
+# Software's Installation
+#--------------------------------------------------------------------------
+#
+# Installing tools and PHP extentions using "apt", "docker-php", "pecl",
+#
 
-RUN cd / && ./install_dependencies.sh
+# Install "curl", "libmemcached-dev", "libpq-dev", "libjpeg-dev",
+#         "libpng-dev", "libfreetype6-dev", "libssl-dev", "libmcrypt-dev",
+RUN set -eux; \
+    apt-get update; \
+    apt-get upgrade -y; \
+    apt-get install -y --no-install-recommends \
+            curl \
+            libmemcached-dev \
+            libz-dev \
+            libpq-dev \
+            libjpeg-dev \
+            libpng-dev \
+            libfreetype6-dev \
+            libssl-dev \
+            libmcrypt-dev \
+            libcurl4-openssl-dev \
+            libonig-dev; \
+    rm -rf /var/lib/apt/lists/*
 
-WORKDIR /var/www/html
+RUN set -eux; \
+    # Install the PHP pdo_mysql extention
+    docker-php-ext-install pdo_mysql; \
+    # Install the PHP pdo_pgsql extention
+    docker-php-ext-install pdo_pgsql; \
+    # Install the PHP gd library
+    docker-php-ext-configure gd \
+            --prefix=/usr \
+            --with-jpeg \
+            --with-freetype; \
+    docker-php-ext-install gd; \
+    docker-php-ext-install curl; \
+    docker-php-ext-install sockets; \
+    docker-php-ext-install json; \
+    docker-php-ext-install opcache; \

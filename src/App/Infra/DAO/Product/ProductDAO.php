@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\App\Infra\DAO\Product;
 
 use App\Domain\Product\ProductDAOInterface;
@@ -14,7 +16,7 @@ class ProductDAO implements ProductDAOInterface
     /**
      * @var \PDO
      */
-    private  $connection;
+    private \PDO $connection;
 
     /**
      * ProductDAO constructor.

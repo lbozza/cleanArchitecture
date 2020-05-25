@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Domain\Product;
+declare(strict_types=1);
 
-use App\Domain\Product\ProductDAOInterface;
+namespace App\Domain\Product;
 
 class ProductService
 {
     /**
      * @var ProductDAOInterface
      */
-    private  $productDAO;
+    private ProductDAOInterface $productDAO;
 
     /**
      * ProductService constructor.
@@ -26,6 +26,5 @@ class ProductService
     public function save(ProductDTO $product)
     {
         $this->productDAO->save($product);
-
     }
 }

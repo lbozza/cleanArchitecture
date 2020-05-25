@@ -1,11 +1,11 @@
 <?php
-declare(strict_types=1);
 
+declare(strict_types=1);
 
 namespace App\App\Action;
 
 use App\Domain\Product\ProductDTO;
-use Domain\Product\ProductService;
+use App\Domain\Product\ProductService;
 use Psr\Container\ContainerInterface;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
@@ -14,22 +14,22 @@ use Slim\Psr7\Response;
  * Class RegisterProductAction
  * @package App\Action
  */
-class RegisterProductAction
+final class RegisterProductAction
 {
+
     /**
-     * @var ContainerInterface
+     * @var ProductService
      */
-    protected  $container;
+    private ProductService $service;
 
     /**
      * RegisterProductAction constructor.
-     * @param ContainerInterface $container
+     * @param ProductService $service
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(ProductService $service)
     {
-        $this->container = $container;
+        $this->service = $service;
     }
-
 
     /**
      * @param Request $request
@@ -41,8 +41,7 @@ class RegisterProductAction
     {
         $payload = json_decode($request->getBody()->getContents(), true);
 
-        $productService = $this->container->get(ProductService::class);
-        $productService->save(
+        $this->service->save(
             new ProductDTO(
                 $payload['description'],
                 $payload['value'],
